@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="weather"
+            type="com.example.lee.newweather.weatherbean.NoaqiWeatherBean">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_weather"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@{weather.now.cond.txt}"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text='@{String.valueOf(weather.now.tmp)+"°"}'
+                        android:textSize="112sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/pop" />
+
+
+                            <TextView
+                                android:id="@+id/qlty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text='@{@string/pop+String.valueOf(weather.daily_forecast.get(0).pop)+"%"}'
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/wind" />
+
+
+                            <TextView
+                                android:id="@+id/wind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text='@{weather.now.wind.sc+" "}'
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/hum" />
+
+
+                            <TextView
+                                android:id="@+id/hum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text='@{@string/hum+"  "+weather.now.hum+"%"}'
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/linechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+
+                    </com.github.mikephil.charting.charts.LineChart>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/lightgrey"></View>
+
+
+                    <com.example.lee.newweather.widget.MyGridView
+                        android:id="@+id/daily_forcast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:clickable="false"
+                        android:numColumns="7">
+
+                    </com.example.lee.newweather.widget.MyGridView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/lightgrey"></View>
+
+                    <com.example.lee.newweather.widget.MyListView
+                        android:id="@+id/suggestion_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:divider="@color/white"
+                        android:dividerHeight="5dp"></com.example.lee.newweather.widget.MyListView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/lightgrey">
+
+                    </View>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+</layout>

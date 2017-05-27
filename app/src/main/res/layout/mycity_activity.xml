@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include layout="@layout/else_bar_layout">
+
+    </include>
+
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/mycity_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/lightgrey"
+        android:headerDividersEnabled="false"
+        android:dividerHeight="0.5dp"
+        android:padding="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

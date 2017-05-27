@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include layout="@layout/else_bar_layout"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/weather" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:text="检查更新"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="反馈"
+            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"/>
+
+        <RelativeLayout
+
+            android:id="@+id/weibo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="新浪微博"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=" @10TB的真爱"
+
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:id="@+id/project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="项目地址"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Github/SummerLeek"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:id="@+id/dataSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="数据来源"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="和风天气"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

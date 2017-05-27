@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NewWeather</string>
+    
+    <string name="hum">湿度</string>
+    <string name="sc">级</string>
+    <string name="pop">降水概率</string>
+    <string name="general">通用</string>
+    <string name="positioning">开启定位</string>
+    <string name="position_key">position_key</string>
+    <string name="update">自动更新</string>
+    <string name="update_key">update_key</string>
+    <string name="notificationbar">通知栏是否开启</string>
+    <string name="notificationbar_key">notificationbar_key</string>
+    <string name="other">其他</string>
+    <string name="about">关于</string>
+    <string name="about_key">about_key</string>
+
+    <string name="mycity">我的城市</string>
+</resources>

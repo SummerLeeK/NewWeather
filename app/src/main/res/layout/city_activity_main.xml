@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include layout="@layout/search_top_bar"></include>
+
+    <LinearLayout
+        android:id="@+id/loadingview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正在拼了命的加载中..."
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/lightgrey"
+        android:dividerHeight="0.5dp"
+        android:padding="15dp"
+        >
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/failed_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/notfound"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="怎么找不到了～"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>

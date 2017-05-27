@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/positive"
+    android:layout_width="match_parent"
+    android:layout_height="56dp">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/back"
+        android:layout_centerVertical="true"
+        />
+    <ImageView
+        android:id="@+id/img_city"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@mipmap/city_cross"
+        android:layout_centerVertical="true"/>
+
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_toRightOf="@id/back"
+        android:layout_toLeftOf="@id/img_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:queryHint="搜索您想去的地方"
+        >
+
+    </android.support.v7.widget.SearchView>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

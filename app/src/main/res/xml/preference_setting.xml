@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/general">
+        <SwitchPreference
+            android:title="@string/positioning"
+            android:key="@string/position_key">
+
+        </SwitchPreference>
+
+        <SwitchPreference
+            android:title="@string/update"
+            android:key="@string/update_key">
+
+        </SwitchPreference>
+        <SwitchPreference
+            android:title="@string/notificationbar"
+            android:key="@string/notificationbar_key">
+
+        </SwitchPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/other">
+
+       <Preference
+           android:title="@string/about"
+           android:key="@string/about_key"
+           ></Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
